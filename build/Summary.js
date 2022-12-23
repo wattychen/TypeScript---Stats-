@@ -6,5 +6,9 @@ class Summary {
         this.analyzer = analyzer;
         this.outPutTarget = outPutTarget;
     }
+    buildAndPrintReport(matches) {
+        const output = this.analyzer.run(matches);
+        this.outPutTarget.print(output);
+    }
 }
 exports.Summary = Summary;
